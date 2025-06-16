@@ -1,0 +1,25 @@
+<view class="container">
+  <!-- 商品展示区域 -->
+  <view class="goodsContiner">
+    <view wx:for="{{dateobj}}" wx:key="index" class="goodsItem">
+      <!-- 商品图片 -->
+      <image class="left" mode="aspectFill" src="/images/bookchoose.jpg"></image> 
+      <!-- 商品详情 -->
+      <view class="right">
+        <view class="price">¥{{item.price}}</view>
+        <view class="name_dis">
+        <view class="name">发布者：{{item.nickName}}</view>
+        <view class="dis">距我:{{ item.distance}}</view>
+        </view>
+        
+        <view class="start">开始时间： {{item.start_date}}---{{item.start_time}}</view>
+        <view class="end">结束时间： {{item.end_date}}---{{item.end_time}}</view>
+        <view class="goshop">详情: {{item.remark}}</view>
+        <!-- 购买按钮 -->
+        <view class="btn">
+          <button style="font-size:20rpx;height:45rpx" size="mini" bind:tap="buy" data-index="{{index}}" disabled="{{disableSubmitBtn}}">立即购买</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

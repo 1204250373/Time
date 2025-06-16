@@ -1,0 +1,79 @@
+<!-- 头部 -->
+
+	<scroll-view class="head" scroll-x="true" scroll-with-animation>
+		<view class="lay_row_cen {{title=='全部订单'?'select_title':''}}" data-name="全部订单" bindtap="select_title" style="margin-left: 30rpx;">
+			<text>全部订单</text>
+		</view>
+		<view class="lay_row_cen {{title=='我发布的'?'select_title':''}}" data-name="我发布的" bindtap="select_title">
+			<text>我发布的</text>
+		</view>
+		<view class="lay_row_cen {{title=='已购买的'?'select_title':''}}" data-name="已购买的" bindtap="select_title">
+			<text>已购买的</text>
+		</view>
+		<view class="lay_row_cen {{title=='已售出的'?'select_title':''}}" data-name="已售出的" bindtap="select_title">
+			<text>已售出的</text>
+		</view>
+		<view class="lay_row_cen {{title=='退款/售后'?'select_title':''}}" data-name="退款/售后" bindtap="select_title">
+			<text>退款/售后</text>
+		</view>
+	</scroll-view>
+
+
+<!-- 内容 -->
+<view wx:if="{{!isEmpty}}">
+	<scroll-view style="width: 100%;height: 94vh;" scroll-y="true">
+		<view class="lay_col_sta pad_20">
+			<block wx:for="{{order}}" wx:key="index">
+				<view class="lay_col_cen pad_20 order">
+					<view class="lay_row_spa" style="margin-bottom: 10rpx;">
+						<text style="color: #888888;">订单编号:{{item.orderNumber}}</text>
+						<text>{{item.type}}</text>
+					</view>
+					<view class="divider"></view>
+					<!-- 此处引用vant的组件，还未添加 -->
+					<!-- 此处图片循环有异议 -->
+					<view class="lay_col_cen">
+						<block>
+							<view class="lay_row_spa">
+								<image src="/images/bookchoose.jpg" class="goods_img"></image>
+								<view class="im">
+									<text class="price" style="color: red;">¥{{item.price}}</text>
+									<button class="contact" style="width:28vw;height: 50rpx;" wx:if="{{item.type==='购买中'}}" bindtap="contact_1" id="{{item.orderNumber}}" data-index="{{index}}">联系卖家</button>
+									<button class="contact" style="width:28vw;height: 50rpx;" wx:if="{{item.type==='售出中'}}" bindtap="contact_2" id="{{item.orderNumber}}" data-index="{{index}}">联系买家</button>
+									<button class="contact" style="width:28vw;height: 50rpx;" wx:if="{{item.type==='待确认退款'}}" bindtap="contact_2" id="{{item.orderNumber}}" data-index="{{index}}">联系买家</button>
+                  <button class="contact" style="width:28vw;height: 50rpx;" wx:if="{{item.type==='退款中'}}" bindtap="contact_1" id="{{item.orderNumber}}" data-index="{{index}}">联系卖家</button>
+								</view>
+							</view>
+
+						</block>
+					</view>
+
+					<view class="divider"></view>
+					<view class="lay_row_sta">
+						<text>创建时间：{{item.time}}</text>
+						<!-- 此处价格用于以购买的 -->
+						<text wx:if="{{item.type==='已购买的'}}" class="price" style="color: red;">实付款：¥{{item.price}}</text>
+						<text wx:if="{{item.type==='已售出的'}}" class="price" style="color: red;">实收款：¥{{item.price}}</text>
+					</view>
+
+					<view wx:if="{{item.type!=='已售出的'}}" class="divider"></view>
+					<view class="shijianbut">
+						<button class="sjbut" style="width:40vw" wx:if="{{item.type==='我发布的'}}" bindtap="xj" data-index="{{index}}">下架商品</button>
+						<button class="sjbut" style="width:40vw" wx:if="{{item.type==='售出中'}}" bindtap="qxdd_1" data-index="{{index}}">取消订单</button>
+						<button class="sjbut" style="width:40vw" wx:if="{{item.type==='购买中'}}" bindtap="qrsh" data-index="{{index}}">确认收货</button>
+						<button class="sjbut" style="width:40vw" wx:if="{{item.type==='购买中'}}" bindtap="qxdd_2" data-index="{{index}}">取消订单</button>
+						<button class="sjbut" style="width:40vw" wx:if="{{item.type==='待确认退款'}}" bindtap="qrtk" data-index="{{index}}">确认退款</button>
+						<button class="sjbut" style="width:40vw" wx:if="{{item.type==='退款中'}}" bindtap="qxtk" data-index="{{index}}">取消退款</button>
+					</view>
+
+
+				</view>
+			</block>
+		</view>
+
+	</scroll-view>
+</view>
+<view wx:else>
+	<!-- 显示文本提示 -->
+	<image class="nothing" src="../../images/没有.jpg"></image>
+</view>

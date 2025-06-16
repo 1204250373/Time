@@ -1,0 +1,135 @@
+/* 页面样式 .wxss */
+/* 页面样式 .wxss */
+page {
+  background-color: rgba(128, 128, 128, 0.15);
+}
+
+.user-card {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(218, 212, 212, 0.1);
+  margin: 15rpx;
+  margin-top: 30rpx;
+}
+
+.header1 {
+  display: flex;
+  align-items: center;
+  /* border: solid black; */
+  top: 1rpx;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+
+
+}
+
+/* .username {
+  font-size: 20px;
+  font-weight: bold;
+
+  margin-left: 50rpx;
+} */
+
+.card1 {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(245, 245, 245, 0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 15rpx;
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+
+.header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.title {
+  font-size: 14.5px;
+  font-weight: bolder;
+
+}
+
+.icon {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 475rpx;
+
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-image {
+  width: 40px;
+  /* 调整图像大小 */
+  height: 40px;
+  /* 调整图像大小 */
+}
+
+.button-text {
+  font-size: 12px;
+  /* 调整文本大小 */
+  margin-top: 5px;
+  /* 调整文本和图像之间的间距 */
+}
+
+/* 卡片布局的样式 */
+.header3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  flex-direction: row;
+  height: 30rpx;
+  /* border: solid black; */
+}
+
+.icon2 {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 525rpx;
+
+}
+
+.card2 {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(245, 245, 245, 0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 15rpx;
+  margin-top: 50rpx;
+  background-color: #fff;
+}
+
+.title_2 {
+  font-size: 14.5px;
+  font-weight: bolder;
+
+
+}
+/* ---------------------------------------------- */
+
+.lxkf{
+  margin: 15rpx;
+  margin-top: 50rpx;
+}

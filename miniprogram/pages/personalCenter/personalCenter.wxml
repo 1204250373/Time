@@ -1,0 +1,69 @@
+<view class="user-card">
+	<!-- 头部：头像和用户名 -->
+	<view class="header1">
+		<image bindtap="handleAvatarClick" wx:if='{{userInfo.nickName.length == 0}}' src="{{userprofile}}" class="avatar" />
+		<image bindtap="logout" wx:if='{{userInfo.nickName.length !== 0}}' src="{{userInfo.avatarUrl}}" class="avatar" />
+		<text wx:if='{{userInfo.nickName.length == 0}}'>请登录</text>
+		<text wx:if='{{userInfo.nickName.length !== 0}}'>{{userInfo.nickName}}</text>
+	</view>
+</view>
+
+<view class="card1">
+	<!-- 上部分：'我的订单'作为一个按钮 -->
+	<navigator url="/pages/orders/orders" class="header2">
+		<text class="title">我的订单</text>
+		<image src="/images/箭头 右 (1).png" class="icon" />
+		<icon type="right" size="20" color="#333"></icon>
+	</navigator>
+
+	<!-- 下部分：四个水平分布的按钮 -->
+	<view class="buttons">
+		<navigator url="/pages/orders/orders?type=全部订单" class="button">
+			<image src="/images/lsdd.png" class="button-image"></image>
+			<text class="button-text">全部订单</text>
+		</navigator>
+		<navigator url="/pages/orders/orders?type=我发布的" class="button">
+			<image src="/images/我发布的.png" class="button-image"></image>
+			<text class="button-text">我发布的</text>
+		</navigator>
+		<navigator url="/pages/orders/orders?type=已购买的" class="button">
+			<image src="/images/已购买.png" class="button-image"></image>
+			<text class="button-text">已购买的</text>
+		</navigator>
+		<navigator url="/pages/orders/orders?type=已售出的" class="button">
+			<image src="/images/已售出 (2).png" class="button-image"></image>
+			<text class="button-text">已售出的</text>
+		</navigator>
+	</view>
+</view>
+<!-- 设置 -->
+<view class="card2">
+	<!-- <navigator url="/pages/set/set" bindtap="set" class="header3"> -->
+	<view bindtap="set" class="header3">
+		<text class="title_2">设置</text>
+		<image src="/images/箭头 右 (1).png" class="icon2" />
+		<icon type="right" size="20" color="#333"></icon>
+	</view>
+	<!-- </navigator> -->
+</view>
+
+<!-- 反馈 -->
+<view class="card2">
+	<!-- <navigator url="/path/to/your/order/page" class="header3"> -->
+		<view bindtap="feedback" class="header3">
+		<text class="title_2">反馈</text>
+		<image src="/images/箭头 右 (1).png" class="icon2" />
+		<icon type="right" size="20" color="#333"></icon>
+	</view>
+	<!-- </navigator> -->
+</view>
+<!-- 钱包 -->
+<view class="card2" bind:tap="addBalanceOrders">
+	<view class="header3">
+		<text class="title_2">钱包</text>
+		<image src="/images/箭头 右 (1).png" class="icon2" />
+		<icon type="right" size="20" color="#333"></icon>
+	</view>
+
+</view>
+<button class="lxkf" open-type="contact" bindcontact="handleContact" type="primary">在线咨询客服</button>

@@ -1,0 +1,28 @@
+
+<view class="message-container" style="max-height: 1270rpx; overflow-y: scroll;">
+<view class="page_1" wx:for="{{combinedMessages}}" wx:key="index" wx:for-item="item" style="max-height: 1400rpx;overflow: hidden;overflow-y: scroll;" >
+
+<!-- 左边的消息列表 -->
+<view class="left"  wx:if="{{item.sender != _openid}}"> 
+ <!-- <image src="../../images/头像.png" style="max-width:50rpx;max-height: 50rpx;"></image> -->
+  <view class="left_content" wx:if="{{item.type == 'text'}}">{{item.content}}</view>
+  <image class="img_l" wx:if="{{item.type == 'image'}}" src="{{item.content}}" mode=""/>
+</view>
+
+<view style="display: flex;align-items: flex-end;flex-direction: column">
+<!-- 右边的消息列表 -->
+<view class="right"  wx:if="{{item.sender == _openid}}">
+  <view wx:if="{{item.type == 'text'}}">{{item.content}}</view>
+  <image class="img_r" wx:if="{{item.type == 'image'}}" src="{{item.content}}" mode=""/>
+</view>
+</view>
+
+</view>
+</view>
+
+<view class="sr_" style="position: fixed;top: 88%;">
+  <view class="input-box">
+    <input confirm-type="send" class="sr" placeholder="请输入消息内容" bindinput="inputMessage" value="{{inputValue}}" bindconfirm="sendMessage"></input>
+    <image class="tptj" bind:tap="choose" src="../../images/图片添加.png" mode=""/>
+  </view>
+</view>

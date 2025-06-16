@@ -1,0 +1,87 @@
+/* pages/order/order.wxss */
+page {
+  background-color: rgba(128, 128, 128, 0.15);
+}
+.head{
+  height: 5vh;
+  color: black;
+  font-size: 25rpx;
+	white-space: nowrap; 
+  width: 100%;
+	padding-bottom: 0rpx;
+  background-color: white;
+}
+  /* 选中的样式 */
+.select_title{
+  height: 80%;
+  color: black;
+  border-bottom:6rpx solid green;
+  width: 96rpx;
+}
+.order{
+  background-color: white;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  /* border: solid black; */
+  font-size: 25rpx;
+  
+}
+/* 分割线 */
+.goods_img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+  /* border: solid black; */
+}
+.im{
+  /* border: solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contact{
+  font-size: small;
+  /* border: solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: -1rpx;
+  background-color: gray;
+  color: #e0e0e0;
+}
+.price{
+  /* border: solid black; */
+  display: flex;
+  Justify-content:flex-end;
+}
+/* 分割线 */
+/* 在样式文件中添加以下代码 */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0; /* 分割线颜色 */
+  margin-top: 7px; /* 调整分割线与上方元素的间距 */
+  margin-bottom: 7px; /* 调整分割线与下方元素的间距 */
+}
+.nothing{
+  /* border: solid black; */
+  width: 100%;
+  height: 800rpx;
+  margin-top: 100rpx;
+}
+
+/* 分割线 */
+.shijianbut{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sjbut{
+  /* border: solid black; */
+  border-radius: 100rpx;
+}
+
+.lay_row_cen {
+  display: inline-block; 
+  margin-right: 60rpx;
+}

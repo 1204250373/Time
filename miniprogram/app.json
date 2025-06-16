@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/homePage/homePage",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/personalCenter/personalCenter",
+    "pages/goods/goods",
+    "pages/publish/publish",
+    "pages/testPage/testPage",
+    "pages/set/set",
+    "pages/orders/orders",
+    "pages/wallet/wallet",
+    "pages/contact/contact"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Time",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/homePage/homePage",
+        "text": "首页",
+        "iconPath": "images/首页.png",
+        "selectedIconPath": "images/首页 (1).png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "images/发布.png",
+        "selectedIconPath": "images/发布 (1).png"
+      },
+      {
+        "pagePath": "pages/personalCenter/personalCenter",
+        "text": "我的",
+        "iconPath": "images/我的 (1).png",
+        "selectedIconPath": "images/我的 (2).png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序地图功能的展示"
+    }
+  },
+  "plugins": {
+    "chooseLocation": {
+    "version": "1.0.12",
+    "provider": "wx76a9a06e5b4e693e"
+    }
+},
+"requiredPrivateInfos":[
+  "chooseLocation",
+  "getLocation"
+]
+}

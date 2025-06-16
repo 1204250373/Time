@@ -1,0 +1,212 @@
+/* pages/newspage/newspage.wxss */
+/* 设置商品展示区域样式 */
+
+.screen{
+	left: 5rpx;
+	border: 1rpx white solid;
+	border-radius: 5rpx;
+	height: 600rpx;
+	width: 800rpx;
+}
+
+.start_time{
+	margin: 100rpx 30rpx 40rpx 30rpx;
+	width: 700rpx;
+}
+
+.end_time{
+margin: 30rpx 30rpx 40rpx 30rpx;
+width: 700rpx;
+}
+
+.input_time{
+	display: flex;
+	border: 1rpx solid black;
+	border-radius: 10rpx;
+	flex-direction: row;
+	height: 90rpx;
+	margin: 10rpx;
+}
+
+
+.title{
+	margin-left: 5rpx;
+	margin-right: 10rpx;
+	font-size: larger;
+	font-weight: bold;
+}
+
+.select_start_date{
+	display: flex;
+	left: 0rpx;
+	width: 53%;
+}
+
+.select_start_time{
+	position: absolute;
+	left: 390rpx;
+	height: 75rpx;
+	width: 320rpx;
+}
+
+.select_end_date{
+	display: flex;
+	left: 0rpx;
+	width: 53%;
+}
+
+.select_end_time{
+	position: absolute;
+	left: 390rpx;
+	height: 75rpx;
+	width: 320rpx;
+}
+
+.btn{
+	display: flex;
+	justify-content: center;
+	margin: 50rpx 60rpx 0rpx 0rpx;
+}
+
+.submit{
+	width: 200rpx;
+	height: 95rpx;
+  margin-right: 15rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+/* pages/newspage/newspage.wxss */
+/* 设置商品展示区域样式 */
+
+.goodsContiner {
+  display: flex; /* 使用 Flex 布局 */
+  flex-wrap: wrap; /* 自动换行 */
+  
+}
+
+.goodsItem {
+  width: 100%; /* 商品条目宽度占满父容器 */
+  margin-bottom: 20rpx; /* 商品条目下方间距 */
+  display: flex; /* 使用 Flex 布局 */
+  /* border: solid black */
+  
+}
+
+/* 设置商品图片样式 */
+.goodsItem .left {
+  width: 150rpx; /* 图片宽度 */
+  height: 200rpx; /* 图片高度 */
+  margin-right: 20rpx; /* 图片右侧间距 */
+  border-radius: 10rpx; /* 图片圆角 */
+  
+}
+
+/* 设置商品详细信息样式 */
+.goodsItem .right {
+  flex: 1; /* 右侧详细信息区域占据剩余空间 */
+  
+}
+
+.goodsItem .price {
+  font-size: 30rpx; /* 商品名称字体大小 */
+  color: rgb(247, 15, 15); /* 商品名称颜色 */
+  margin-bottom: 10rpx; /* 下方间距 */
+  /* border: solid black; */
+}
+
+.goodsItem .start {
+  font-size: 24rpx; /* 作者和推荐值字体大小 */
+  color: #666; /* 字体颜色 */
+  margin-bottom: 10rpx; /* 下方间距 */
+}
+
+.goodsItem .end {
+  font-size: 24rpx; /* 价格字体大小 */
+  color: #999; /* 字体颜色 */
+  margin-bottom: 10rpx; /* 下方间距 */
+}
+
+.goodsItem .goshop {
+  font-size: 24rpx; /* "详情"字体大小 */
+  color: #000000; /* 字体颜色 */
+  margin-bottom: 10rpx; /* 下方间距 */
+}
+
+.goodsItem .name{
+  font-size: 24rpx; /* "详情"字体大小 */
+  color: #000000; /* 字体颜色 */
+  margin-bottom: 10rpx; /* 下方间距 */
+}
+
+/* 设置按钮样式 */
+.goodsItem .btn {
+  display: flex; /* 使用 Flex 布局 */
+  justify-content: space-between; /* 按钮之间的间距相等 */
+  
+}
+
+.goodsItem .btn button {
+  flex: 1; /* 按钮占据剩余空间 */
+  font-size: 24rpx; /* 按钮字体大小 */
+  height: 60rpx; /* 按钮高度 */
+  border-radius: 10rpx; /* 按钮圆角 */
+  margin-right: 10rpx; /* 按钮右侧间距 */
+  background-color: rgba(211, 211, 211, 0.767);
+}
+/* 设置搜索框样式 */
+.search {
+  width: 80%; /* 搜索框宽度占父容器的80% */
+  margin: 0 auto 20px; /* 上下间距为20px，左右居中 */
+  padding: 15px; /* 内边距 */
+  font-size: 15px; /* 字体大小 */
+  border: 1px solid #ccc; /* 边框样式 */
+  border-radius: 10px; /* 边框圆角 */
+  display: flex; /* 使用 Flex 布局 */
+  justify-content: space-between; /* 搜索框内元素均匀分布 */
+}
+
+/* 设置输入框样式 */
+.search input {
+  flex: 1; /* 输入框占据剩余空间 */
+  border: none; /* 取消边框 */
+  outline: none; /* 取消输入框默认样式 */
+  padding: 0 10px; /* 左右内边距 */
+}
+
+/* 设置按钮样式 */
+.search button {
+  background-color: #007bff; /* 按钮背景色 */
+  color: #fff; /* 按钮文字颜色 */
+  border: none; /* 取消边框 */
+  border-radius: 5px; /* 按钮圆角 */
+  padding: 5px 10px; /* 上下左右内边距 */
+  margin-left: 10px; /* 左侧间距 */
+  cursor: pointer; /* 鼠标悬停样式为手型 */
+}
+
+/* 搜索框内元素垂直居中 */
+.search input,
+.search button {
+  align-self: center;
+}
+.name_dis{
+  /* border: solid black; */
+  display: flex; /* 使用 Flex 布局 */
+  justify-content: space-between; /* 按钮之间的间距相等 */
+}
+.name_dis .dis{
+    /* border: solid black; */
+    width: 250rpx;
+    display: flex; /* 使用 Flex 布局 */
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+}
+
+

@@ -1,0 +1,30 @@
+.lay_row_spa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.lay_col_cen{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* .lay_col_sta{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start
+} */
+.lay_row_sta{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.pad_20 {
+  padding: 20rpx;
+}
+
+.head {
+  font-size: 24rpx;
+  font-weight: bold;
+}

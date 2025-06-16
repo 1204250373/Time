@@ -1,0 +1,88 @@
+/* pages/1/1.wxss */
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.swiper-item {
+  width: 100%; /* 设置轮播项宽度为容器宽度 */
+  height: 100%; /* 设置轮播项高度为容器高度 */
+  display: flex; /* 使用 Flex 布局让内容水平居中 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  background-color: #ccc; /* 设置轮播项背景色 */
+  color: #fff; /* 设置文字颜色 */
+  font-size: 26px; /* 设置文字大小 */
+}
+
+.top-bar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.date,
+.time,
+.weather {
+	margin-right: 10px;
+	font-size: larger;
+	font-weight: bold;
+	font-family: SimSun;
+}
+
+
+
+.button {
+  width: 200px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+/* .stk{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+} */
+
+
+.popup-scroll {
+  height: 600rpx; /* 设置高度为 600rpx */
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  z-index: 999;
+}
+
+.popup-content {
+  margin-bottom: 20px;
+}
+
+.close-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #0056b3;
+}

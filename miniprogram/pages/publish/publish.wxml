@@ -1,0 +1,67 @@
+<view class="container">
+  <form bindsubmit="submit">
+    <view class="start_time">
+      <view class="title">开始时间:</view>
+      <view class="input_time">
+        <view class="select_start_date" style="padding-top:15rpx;padding-left:10rpx;">
+          <picker name="startDate" value="{{startDate}}" mode="date" bindchange="bindStartDateChange" style="width: 100%;">
+            <text style="font-size: large; opacity: 0.7;width: 100%;">日期 {{startDate}}</text>
+          </picker>
+        </view>
+
+        <view class="select_start_time" style="padding-top:15rpx;padding-left:15rpx;">
+          <picker name="startTime" value="{{startTime}}" mode="time" bindchange="bindStartTimeChange" style="width: 100%;">
+            <text style="font-size: large;opacity: 0.7;">时间 {{startTime}}</text>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="end_time">
+      <view class="title">结束时间:</view>
+      <view class="input_time">
+        <view class="select_end_date" style="padding-top:15rpx;padding-left:10rpx;">
+          <picker name="endDate" value="{{endDate}}" mode="date" bindchange="bindEndDateChange" style="width: 100%;" start="{{startDate}}">
+            <text style="font-size: large;opacity: 0.7;">日期 {{endDate}}</text>
+          </picker>
+        </view>
+        <view class="select_end_time" style="padding-top:15rpx;padding-left:15rpx;">
+          <picker name="endTime" value="{{endTime}}" mode="time" bindchange="bindEndTimeChange" style="width: 100%;" start="{{startTime}}">
+            <text style="font-size: large;opacity: 0.7;">时间 {{endTime}}</text>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="price">
+      <view class="title">单价:</view>
+      <view class="input_price" style="padding-left: 10rpx;">
+        <input name="price" type="digit" placeholder=" 元" style="font-size: large; height: 100%; width: 100%;" value="{{price}}" />
+      </view>
+    </view>
+
+    <view class="remark">
+      <view class="title">取货方式</view>
+      <view class="input_remark" style="padding-left: 10rpx;">
+        <input name="remark" placeholder=" 如：XXXX宿舍自取/xxxx地铁口自取/二维码" maxlength="35" style="font-size: medium;width: 100%;height: 100%;" value="{{remark}}" />
+      </view>
+    </view>
+
+    <view class="position">
+      <view class="title">位置:</view>
+      <view class="input_price" style="padding-left: 10rpx;">
+        <!-- 此处添加组件 -->
+        <!-- <button bind:tap="ddxd" class="loc">获取位置</button>wx:if="{{selectedLocation}}" -->
+        <view bind:tap="ddxd"  class="selected-location">{{selectedLocation.address}}{{selectedLocation.name}}</view>
+      </view>
+    </view>
+
+
+    <view class="btn">
+      <button class="submit" type="primary" form-type="submit" disabled="{{disableSubmitBtn}}">提交</button>
+      <button class="reset" type="default" form-type="reset" bind:tap="reset">重置</button>
+    </view>
+
+
+  </form>
+</view>

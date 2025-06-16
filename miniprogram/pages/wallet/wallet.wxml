@@ -1,0 +1,25 @@
+<view class="container">
+	<view class="card1">
+		<view class="header2">
+			<text class="title_2">余额</text>
+			<text class="title_1">{{balance}}</text>
+		</view>
+	</view>
+
+	<view class="card2">
+		<view class="header3">
+			<view class="title_3">
+				· 关于钱包的告知事项
+			</view>
+		</view>
+    <text>1.点击提现默认全部余额提现
+          2.点击确认提现后请上传收款码
+          3.我们会在24h内尽快打款
+          4.有问题请联系客服，我们致力于保障您的权益
+    </text>
+	</view>
+
+	<button class="tx" type="primary" bind:tap="withdraw" style="margin-top: 20rpx; height: 120rpx; border-radius: 60rpx;" disabled="{{disableSubmitBtn}}">
+		提现
+	</button>
+</view>

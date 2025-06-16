@@ -1,0 +1,48 @@
+<view class="container2">
+	<!-- 顶部显示时间日期和当地天气 -->
+	<view class="top-bar">
+		<text class="date">{{currentDate}}</text>
+		<text class="time">{{currentTime}}</text>
+		<!-- <text class="weather">{{localWeather}}</text> -->
+	</view>
+
+	<swiper autoplay interval="6000" duration="3000" style="margin-top: 20rpx; margin-bottom: 20rpx;" style="height: 350rpx;">
+		<swiper-item>
+			<view class="swiper-item" style="font-family: KaiTi;">欢迎使用Time时间市场</view>
+		</swiper-item>
+		<!-- <swiper-item>
+      <view class="swiper-item">第二页</view>
+    </swiper-item>
+    <swiper-item>
+      <view class="swiper-item">第三页</view>
+    </swiper-item> -->
+	</swiper>
+
+	<!-- 中间两个同尺寸的跳转按钮 -->
+	<view class="button-container" style="margin-top: 50rpx; margin-bottom: 20rpx;">
+		<button bindtap="getcard" style="width: 400rpx; height: 250rpx;" class="button">商品列表</button>
+		<!-- <button bindtap="getcard" style="width: 400rpx; height: 250rpx;" class="button">电子</button>   -->
+	</view>
+</view>
+
+<scroll-view class="popup-scroll" style="max-height: 700rpx; overflow-y: scroll;">
+	<!-- 在页面中定义一个弹窗容器，初始状态为隐藏 -->
+	<view class="popup" hidden="{{!showPopup}}" style="max-height: 1000rpx;overflow: hidden;overflow-y: scroll;">
+		<!-- 弹窗内容 -->
+		<view class="popup-content">
+
+			<text>
+				1.本小程序只提供一个交易平台用于便捷大家进行地铁日卡的二手交易
+				2.可以进行发布，选择日卡的生效时间和结束时间，自定义价格，填写备注(用于声明是实体卡进行线下交易或者电子日卡可在购买后点击联系卖家进入聊天室发二维码)
+				3.购买商品：选择符合自己的时间段的商品进行购买，在订单页面联系卖家
+				4.所有授权必须同意
+				5.卖出商品的余额会在钱包里面显示，点击提现后一定要上传收款码，24h内会尽快打款
+				6.有任何问题请及时联系客服，我们会全力保障同学们的权益不受到损害
+
+				一切解释权归本小程序所有
+			</text>
+		</view>
+		<!-- 关闭按钮 -->
+		<view class="close-button" bindtap="closePopup">关闭</view>
+	</view>
+</scroll-view>
